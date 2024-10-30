@@ -16,6 +16,7 @@ class CrmPage(BasePage):
 
     def login_to_crm(self, login: str, password: str):
         """Вход в CRM"""
+        self.page.wait_for_timeout(3000)
         self.login_input.wait_for(state="visible")
         self.login_input.fill(login)
         self.login_input.press("Tab")

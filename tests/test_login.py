@@ -22,6 +22,7 @@ def test_successful_login(page):
         login_page.navigate_to(TEST_URL)
     
     with testit.step("Ввод учетных данных и успешный вход"):
-        assert login_page.login(TEST_PHONE, TEST_PASSWORD)  # метод login возвращает результат is_logged_in()
+        login_page.login(TEST_PHONE, TEST_PASSWORD)  # метод login возвращает результат is_logged_in()
 
-    
+    with testit.step("Проверка успешной авторизации"):
+        assert login_page.is_logged_in(), "Не удалось войти в систему"

@@ -16,7 +16,7 @@ def pytest_configure(config):
 def browser_type_launch_args(browser_type_launch_args):
     return {
         **browser_type_launch_args,
-        "headless": True  # всегда False
+        "headless": True # всегда False
     }
 
 @pytest.fixture(scope="function")

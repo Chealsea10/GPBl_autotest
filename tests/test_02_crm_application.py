@@ -20,7 +20,6 @@ def test_delete_application(page, application_number):
     crm_page = CrmPage(page)
     with testit.step("Открытие страницы авторизации"):
         page.goto(CRM_URL)
-        page.wait_for_load_state("networkidle")
     with testit.step("Ввод логина и пароля"):    
         crm_page.login_to_crm(CRM_LOGIN, CRM_PASSWORD)
     with testit.step("Переход на страницу заявки и очистка корзины"):    
