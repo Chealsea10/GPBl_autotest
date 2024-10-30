@@ -1,6 +1,7 @@
 import pytest
 import testit
 from pages.login_page import LoginPage
+from utils.file_handler import FileHandler
 from utils.env import TEST_URL, TEST_PHONE, TEST_PASSWORD
 
 @pytest.mark.auth  # маркер для группировки тестов авторизации

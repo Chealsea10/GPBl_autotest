@@ -10,7 +10,7 @@ class ApplicationPage(BasePage):
         self.upload_inputs = page.get_by_label("Upload")
         self.sign_button = page.get_by_role("button", name="Подписать")
         self.success_message = 'text="Мой заказ"'
-        self.application_number_text = page.locator("text=/Заявка № \d+/").first
+        self.application_number_text = page.locator("text=/Заявка № \\d+/").first
 
     def get_application_number(self) -> str:
         """Получает номер заявки"""

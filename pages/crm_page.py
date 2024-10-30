@@ -34,9 +34,10 @@ class CrmPage(BasePage):
         self.page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
     
     # Находим сами чекбоксы (input type="checkbox")
+        
         basket_checkbox = self.page.locator("input[id='UF_BASKET']")
         viewed_checkbox = self.page.locator("input[id='UF_VIEWED']")
-    
+        
     # Проверяем состояние и снимаем галочки если они установлены
         if basket_checkbox.is_checked():
             basket_checkbox.uncheck()

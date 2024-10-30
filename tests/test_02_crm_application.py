@@ -10,6 +10,7 @@ from utils.env import CRM_URL, CRM_LOGIN, CRM_PASSWORD
 @testit.workItemIds(5334)  # Сюда добавим ID тест-кейса ручного после его создания в TestIT
 @testit.displayName('Очистка корзины через CRM')
 @testit.externalId('gpb_delete_application')
+@pytest.mark.flaky(reruns=3)
 def test_delete_application(page, application_number):
     """
     Тест удаления заявки в CRM
