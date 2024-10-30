@@ -33,7 +33,7 @@ jobs:
       env:
         PLAYWRIGHT_HEADLESS: "true"
       run: |
-        pytest --testit -v -s 
+        pytest -v -s 
 
     - name: Upload Test Results
       if: always()
