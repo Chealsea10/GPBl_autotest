@@ -26,6 +26,6 @@ class LoginPage(BasePage):
 
     def is_logged_in(self) -> bool:
         try:
-            return self.home_element.is_visible()
+            return self.home_element.is_visible(timeout=10000)
         except Exception as e:
             return False
